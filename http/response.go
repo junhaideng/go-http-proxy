@@ -13,7 +13,6 @@ import (
 )
 
 type Response struct {
-	Path       string
 	Version    string
 	StatusCode int
 	StatusText string

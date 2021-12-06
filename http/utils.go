@@ -26,7 +26,7 @@ func NotFound(conn net.Conn) {
 	conn.Close()
 }
 
-func RequireProxyAuth(conn net.Conn){
+func RequireProxyAuth(conn net.Conn) {
 	conn.Write([]byte("HTTP/1.1 407 Proxy Authentication Required\r\n\r\n"))
 	conn.Close()
 }

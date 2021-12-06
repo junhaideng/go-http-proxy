@@ -56,7 +56,6 @@ func (r Request) BasicAuth() *Auth {
 	return auth
 }
 
-
 func ParseRequest(conn io.Reader) (*Request, error) {
 	br := bufio.NewReader(conn)
 
@@ -123,5 +122,3 @@ func ParseRequest(conn io.Reader) (*Request, error) {
 
 	return req, nil
 }
-
-
