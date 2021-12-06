@@ -2,8 +2,8 @@
 
 ### 运行
 
-```go
-go run main.go
+```bash
+go run main.go -f config/config.yml -w proxy.log
 ```
 
 ### 配置
