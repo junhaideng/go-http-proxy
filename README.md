@@ -1,5 +1,28 @@
 ## HTTP Proxy
 
+### 运行
+
+```go
+go run main.go
+```
+
+### 配置
+
+`config.yml` 中包含项目的配置
+```yml
+server:
+  port: 8080  # 运行的端口号
+  host: 0.0.0.0  # 地址
+  auth: 
+    enable: true # 是否开启鉴权
+    username: proxy  # 鉴权用户名和密码
+    password: proxy
+```
+
+
+
+<hr/>
+
 ### 概念
 
 首先我们来了解一下 `HTTP` 代理的相关概念，通常来说，有两类 `HTTP` 代理，一类是`正向代理`，一类是`反向代理`。
@@ -34,7 +57,7 @@ HTTP 基于传输层协议而搭建的应用层协议，其实 HTTP 请求和响
 
 格式如下：
 
-<img src="images/response.png" >
+<img src="images/response.png" width=400>
 
 每一行也是以 `\r\n` 结尾，响应体可以为空
 
@@ -182,6 +205,7 @@ if request.Method ==  "CONNECT"{
 下载插件 `Proxy SwitchyOmega`，如果你使用 `Edge`，见 [这里](https://microsoftedge.microsoft.com/addons/detail/proxy-switchyomega/fdbloeknjpnloaggplaobopplkdhnikc)，如果你使用Google，见 [这里](https://chrome.google.com/webstore/detail/padekgcemlokbadohgkifijomclgjgif)
 
 打开插件进行配置，如下
+
 <img src="images/SwitchyOmega.png" width=500>
 
 访问一个网址，比如`http://httpbin.org`，如果可以访问，那么说明代理服务器生效~
