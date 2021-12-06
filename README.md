@@ -1,6 +1,4 @@
-### HTTP Proxy
-
-## 动手写一个HTTP正向代理
+## HTTP Proxy
 
 ### 概念
 
